@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+script:
+- npm test
+- npm run build
+deploy:
+  deploy: 
+  provider: heroku
+  app: react-cicd-app
+  api_key:
+    secure: umSxb5cFTvCSdsQ7u2YEs1Cjfl+0xE0jtSx7PgYAJ4jpl+XnTlP5MvPnjC3gOlwF1NKmCzgBNo/oTmuls2WHEJfpx7Eg5PdfvHCupmTtdre1bkL5p24qSSn6qCF2nJ3UqHzJJLlF60aV4zig4YYuh8ZqnmR52uJfcws+XFba3s2LpR3WEgiBBYxbVJIe82txjFnqzHArnc7odIJbr+OeKLgU9m718VkniKqaXJEMpqPGjmj1O5RdIfwdt5s7mzEhV/yvki38mVx+8jJRm749gRGb3w4vxKJlfth5UGWUT1/TpoqePCe2GhSKzlIr6xsdVindLkMLVJgMlkT3dlK3peksfJ79aPMo2bmz03b4C+O1+iOsMD9SXeN0AyOc31klUCWHW926TN/Qhx5SnzeN7hNe2omhinFZJh3/G5JDdKMxfq2NTOSHmyxao2Ng3ueBTl+oGu2dtvMrsAFWuyGHBGKtdEVzkhxGSdwMCPRhnwmpN2ou2ndJTDkI/bVR2gsj6celPXHO/11R5PNfszCDdJlti3s3xtmHVMADlPwuo0LrOskt3sCJbstk0j+Oi4AHEFp6jVAHUJubKuw0mt7pKU5+ioGfN1yH3Dy5gDu1hPSy2QmGSFrzzA89VMer+VmoPba3YgRhbzTiwZvmq9uf6Rw+iuppRpMck7UtL3HYZ6c=
